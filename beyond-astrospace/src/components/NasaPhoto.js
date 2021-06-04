@@ -1,5 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+import NavBar from "./NavBar";
+import "./NasaPhoto.css";
 
 const apiKey = process.env.REACT_APP_NASA_KEY;
 
@@ -32,28 +34,32 @@ function NasaPhoto() {
     }
 
     return (
-        <div>
-            {photoData.media_type === "image" ? (
-                <img src={photoData.url} alt={photoData.title} />
-            ) : (
-                <iframe
-                    title="space-video"
-                    src={photoData.url}
-                    framerborder="0"
-                    gesture="media"
-                    allow="encrypted-media"
-                    allowFullScreen
-                    className="photo"
-                />
-            )}
+        <>
+            <NavBar />
+            <div className="nasa-photo">
+                {/* Select between image and video extensions */}
+                {photoData.media_type === "image" ? (
+                    <img src={photoData.url} alt={photoData.title} className="photo" />
+                ) : (
+                    <iframe
+                        title="space-video"
+                        src={photoData.url}
+                        framerborder="0"
+                        gesture="media"
+                        allow="encrypted-media"
+                        allowFullScreen
+                        className="photo"
+                    />
+                )}
 
-            <div>
-                <h1>{photoData.title}</h1>
-                <p>{photoData.date}</p>
-                <p>{photoData.explanation}</p>
+                <div>
+                    <h1>{photoData.title}</h1>
+                    <p className="date">{photoData.date}</p>
+                    <p className="explanation">{photoData.explanation}</p>
+                </div>
             </div>
-        </div>
-    )
+        </>
+    );
 };
 
 export default NasaPhoto;
