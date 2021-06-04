@@ -1,8 +1,30 @@
 import React, { useEffect, useState } from "react";
+import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+
 import "./RocketList.css";
 
+// Rocket object
 const Rocket = (props) => {
-  return <div className="rocket">{props.rocket.name}</div>;
+  return (
+    <div className="rocket">
+      {/* TODO: Img does not show */}
+      <img scr={props.rocket.flickr_images[2]} />
+      <div className="info">
+        <h1>{props.rocket.name}</h1>
+        <p>{props.rocket.description}</p>
+        <h4>Active status: {props.rocket.active}</h4>
+        <h4>Booters: {props.rocket.boosters}</h4>
+        <h4>Cost per launch: {props.rocket.cost_per_launch}</h4>
+        <h4>First flight: {props.rocket.first_flight}</h4>
+
+        <h3>Height: {props.rocket.height.meters}</h3>
+
+        <h4>Isp: {props.rocket.engines.isp.sea_level}</h4>
+
+        {/* <h3>{props.rocket.engines.thrust_sea_level}</h3> */}
+      </div>
+    </div>
+  );
 };
 
 function RocketList() {
@@ -12,7 +34,7 @@ function RocketList() {
   // Load rockets function
   const loadRockets = async () => {
     // Get the response from the server from url
-    const response = await fetch(`https://api.spacexdata.com/v3/rockets`);
+    const response = await fetch(`https://api.spacexdata.com/v4/rockets`);
 
     // Convert to jso5
     const json = await response.json();
