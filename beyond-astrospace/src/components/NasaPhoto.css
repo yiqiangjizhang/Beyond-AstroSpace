@@ -6,7 +6,7 @@
 }
   
 .nasa-photo img {
-    width: 50%;
+    width: 60vw;
     margin-right: 50px;
     object-fit: contain;
     max-height: 80vh;
@@ -26,7 +26,7 @@
     color: #bbb;
 }
 
-@media (max-width: 0.6vw) {
+@media (max-width: 1280px) {
     .nasa-photo {
       display: block;
     }
