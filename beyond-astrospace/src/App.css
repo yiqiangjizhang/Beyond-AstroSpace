@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+header .header-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 2rem;
+  background-color: rgba(14, 163, 163, 0.158);
+}

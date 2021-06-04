@@ -8,6 +8,11 @@ import NasaPhoto from "./components/NasaPhoto";
 function App() {
   return (
     <BrowserRouter>
+      <header>
+        <div className="header-content">
+          Beyond AstroSpace ! Rediscover Space
+        </div>
+      </header>
       <div>
         <Route component={Home} path="/" exact />
         <Route component={NasaPhoto} path="/nasaphoto" />
