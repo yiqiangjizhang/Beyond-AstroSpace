@@ -19,6 +19,12 @@ function App() {
         <Route component={RocketList} path="/rocketlist" />
         <Route component={LaunchList} path="/launchlist" />
       </div>
+      <footer>
+        <p>Author: Someone</p>
+        <p>
+          <a href="mailto:hola@example.com">hola@example.com</a>
+        </p>
+      </footer>
     </BrowserRouter>
   );
 }
