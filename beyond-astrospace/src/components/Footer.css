@@ -1,0 +1,16 @@
+
+.footer_text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 2rem;
+    background-color:  rgba(14, 163, 163, 0.158);
+}
+
+.footer_text a {
+    color: rgb(247, 247, 247);
+    padding: 0rem 1rem;
+}

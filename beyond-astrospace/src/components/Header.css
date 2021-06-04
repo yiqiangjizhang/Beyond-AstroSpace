@@ -1,0 +1,29 @@
+.header_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    background-color: rgba(14, 163, 163, 0.158);
+}
+
+.header_text {
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 2rem 2rem 2rem 25vh;
+    text-align: center;
+    justify-content: center;
+  }
+.nasa_logo {
+    padding: 1rem; 
+    height: 8rem;
+    float: left;
+}
+
+.spacex_logo {
+    padding: 1rem; 
+    height: 8rem;
+}
+
+.upc_logo {
+    padding: 1rem 1rem 1rem 25vh;; 
+    height: 8rem;
+}

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import NavBar from "./NavBar";
 import "./LaunchList.css";
+import Loading from "./Loading";
 
 // Launch object
 const Launch = (props) => {
@@ -44,7 +45,10 @@ function LaunchList() {
 
   // If loading, then display loading message
   if (launch_list === null) {
-    return <div>Loading...</div>;
+    // return <div>Loading...</div>;
+    return (
+      <Loading />
+    )
   }
 
   // For every launch in rocket list, pass rocket id and rocket object to rocket list
