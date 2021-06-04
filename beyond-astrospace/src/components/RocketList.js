@@ -22,8 +22,8 @@ const Rocket = (props) => {
           Thrust at sea level: {props.rocket.engines.thrust_sea_level.kN} kN
         </h4>
 
-        <a href="#" className="btn btn-primary">
-          Go somewhere
+        <a href={props.rocket.wikipedia} className="btn btn-primary">
+          More info
         </a>
       </div>
     </div>
