@@ -6,15 +6,13 @@ import RocketList from "./components/RocketList";
 import LaunchList from "./components/LaunchList";
 import LaunchPage from "./components/LaunchPage";
 import NasaPhoto from "./components/NasaPhoto";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <BrowserRouter>
-      <header>
-        <div className="header-content">
-          Beyond AstroSpace ! Rediscover Space
-        </div>
-      </header>
+      <Header />
       <div>
         <Route component={Home} path="/" exact />
         <Route component={NasaPhoto} path="/nasaphoto" />
@@ -22,12 +20,7 @@ function App() {
         <Route component={LaunchList} path="/launchlist" />
         <Route component={LaunchPage} path="/launchpage/:id" />
       </div>
-      <footer>
-        <p>Author: Someone</p>
-        <p>
-          <a href="mailto:hola@example.com">hola@example.com</a>
-        </p>
-      </footer>
+      <Footer />
     </BrowserRouter>
   );
 }

@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import NavBar from "./NavBar";
 import "./NasaPhoto.css";
+import Loading from "./Loading";
 
 const apiKey = process.env.REACT_APP_NASA_KEY;
 
@@ -30,7 +31,10 @@ function NasaPhoto() {
 
     // If loading, then display loading message
     if (photoData === null) {
-        return <div>Loading...</div>;
+        return (
+            // <div>Loading...</div>
+            <Loading />
+        );
     }
 
     return (
