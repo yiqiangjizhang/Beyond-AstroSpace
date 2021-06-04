@@ -1,4 +1,6 @@
 .launch {
+  display: flex;
+  flex-direction: row;
   position: relative;
   width: 50%;
   padding: 1rem;
@@ -9,6 +11,8 @@
   margin-right: auto;
   box-shadow: 5px 5px 5px rgba(0, 255, 255, 0.521);
   background-color: ghostwhite;
+  margin-bottom: 30px;
+  flex-basis: 50%;
 }
 
 .launch:first-child {
@@ -19,4 +23,11 @@
   font-size: 1rem;
   font-style: normal;
   font-display: normal;
+}
+
+.launch img {
+  max-width: none;
+  width: 10rem;
+  margin-right: 1rem;
+  flex-shrink: 0;
 }

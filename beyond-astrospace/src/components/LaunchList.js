@@ -7,8 +7,14 @@ import "./LaunchList.css";
 const Launch = (props) => {
   return (
     <div className="launch">
+      <img src={props.launch.links.patch.small} />
       <div className="info">
         <h1>{props.launch.name}</h1>
+        <h4>Launch date: {props.launch.date_utc}</h4>
+        <h4>Success: {props.launch.success}</h4>
+        <h4>Reused: {props.launch.reused}</h4>
+        <h4>Recovered: {props.launch.recovered}</h4>
+
         <p>{props.launch.details}</p>
       </div>
     </div>
@@ -46,10 +52,12 @@ function LaunchList() {
     <>
       <NavBar />
 
-      <div>
-        {launch_list.map((launch_item) => (
-          <Launch key={launch_item.id} launch={launch_item} />
-        ))}
+      <div className="container">
+        <div className="row">
+          {launch_list.map((launch_item) => (
+            <Launch key={launch_item.id} launch={launch_item} />
+          ))}
+        </div>
       </div>
     </>
   );

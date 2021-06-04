@@ -11,16 +11,16 @@ const Rocket = (props) => {
       <div className="info">
         <h1>{props.rocket.name}</h1>
         <p>{props.rocket.description}</p>
-        <h4>Active status: {props.rocket.active}</h4>
-        <h4>Booters: {props.rocket.boosters}</h4>
-        <h4>Cost per launch: {props.rocket.cost_per_launch}</h4>
+
+        <h4>Boosters: {props.rocket.boosters}</h4>
+        <h4>Cost per launch: {props.rocket.cost_per_launch} $</h4>
         <h4>First flight: {props.rocket.first_flight}</h4>
+        <h4>Height: {props.rocket.height.meters} m</h4>
+        <h4>Isp: {props.rocket.engines.isp.sea_level} s^(-1)</h4>
+        <h4>
+          Thrust at sea level: {props.rocket.engines.thrust_sea_level.kN} kN
+        </h4>
 
-        <h4>Height: {props.rocket.height.meters}</h4>
-
-        <h4>Isp: {props.rocket.engines.isp.sea_level}</h4>
-
-        {/* <h3>{props.rocket.engines.thrust_sea_level}</h3> */}
         <a href="#" className="btn btn-primary">
           Go somewhere
         </a>
