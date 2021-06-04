@@ -1,7 +1,16 @@
 import React from "react";
+import { useParams } from "react-router";
+import NavBar from "./NavBar";
 
 function LaunchPage() {
-  return <div>New Launch Page</div>;
+  const { id } = useParams();
+
+  return (
+    <>
+      <NavBar />
+      <div>New Launch Page (ID: {id})</div>
+    </>
+  );
 }
 
 export default LaunchPage;

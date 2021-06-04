@@ -8,7 +8,7 @@ const Rocket = (props) => {
   return (
     <div className="rocket">
       {/* FIXME: Img does not show */}
-      <img scr={props.rocket.flickr_images[2]} />
+      <img scr={props.rocket.flickr_images[1]} />
       <div className="info">
         <h1>{props.rocket.name}</h1>
         <p>{props.rocket.description}</p>
@@ -59,11 +59,9 @@ function RocketList() {
     <>
       <NavBar />
 
-      <div>
-        {rocket_list.map((rocket_item) => (
-          <Rocket key={rocket_item.id} rocket={rocket_item} />
-        ))}
-      </div>
+      {rocket_list.map((rocket_item) => (
+        <Rocket key={rocket_item.id} rocket={rocket_item} />
+      ))}
     </>
   );
 }

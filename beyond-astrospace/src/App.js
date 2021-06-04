@@ -1,8 +1,10 @@
+import { BrowserRouter, Route } from "react-router-dom";
 import "./App.css";
+
+import Home from "./components/Home";
 import RocketList from "./components/RocketList";
 import LaunchList from "./components/LaunchList";
-import { BrowserRouter, Route } from "react-router-dom";
-import Home from "./components/Home";
+import LaunchPage from "./components/LaunchPage";
 import NasaPhoto from "./components/NasaPhoto";
 
 function App() {
@@ -18,6 +20,7 @@ function App() {
         <Route component={NasaPhoto} path="/nasaphoto" />
         <Route component={RocketList} path="/rocketlist" />
         <Route component={LaunchList} path="/launchlist" />
+        <Route component={LaunchPage} path="/launchpage/:id" />
       </div>
       <footer>
         <p>Author: Someone</p>
