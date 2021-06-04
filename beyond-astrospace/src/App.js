@@ -1,10 +1,9 @@
 import "./App.css";
 import RocketList from "./components/RocketList";
-<<<<<<< HEAD
+import LaunchList from "./components/LaunchList";
 import { BrowserRouter, Route } from "react-router-dom";
 import Home from "./components/Home";
 import NasaPhoto from "./components/NasaPhoto";
-
 
 function App() {
   return (
@@ -12,22 +11,10 @@ function App() {
       <div>
         <Route component={Home} path="/" exact />
         <Route component={NasaPhoto} path="/nasaphoto" />
+        <Route component={RocketList} path="/rocketlist" />
+        <Route component={LaunchList} path="/launchlist" />
       </div>
     </BrowserRouter>
-
-    // <div>
-    //   <RocketList />
-    // </div>
-=======
-import LaunchList from "./components/LaunchList";
-
-function App() {
-  return (
-    <div>
-      <RocketList />
-      {/* <LaunchList /> */}
-    </div>
->>>>>>> 46ad3796b235ab8ccb89800219907c13d3636639
   );
 }
 
