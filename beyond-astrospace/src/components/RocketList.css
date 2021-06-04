@@ -1,6 +1,6 @@
 .rocket {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   position: relative;
   width: 50%;
   padding: 1rem;
@@ -25,6 +25,7 @@
 }
 
 .rocket img {
-  width: 100%; /* This if for the object-fit */
-  height: 100%; /* This if for the object-fit */
+  width: 50%;
+  padding-right: 2rem;
+  border-radius: 1rem;
 }

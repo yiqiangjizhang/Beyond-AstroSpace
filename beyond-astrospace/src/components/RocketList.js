@@ -54,9 +54,7 @@ function RocketList() {
   // If loading, then display loading message
   if (rocket_list === null) {
     // return <div>Loading...</div>;
-    return (
-      <Loading />
-    )
+    return <Loading />;
   }
 
   // For every rocket in rocket list, pass rocket id and rocket object to rocket list
