@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
-
+import NavBar from "./NavBar";
 import "./RocketList.css";
 
 // Rocket object
 const Rocket = (props) => {
   return (
     <div className="rocket">
-      {/* TODO: Img does not show */}
+      {/* FIXME: Img does not show */}
       <img scr={props.rocket.flickr_images[2]} />
       <div className="info">
         <h1>{props.rocket.name}</h1>
@@ -20,6 +20,7 @@ const Rocket = (props) => {
         <h3>Height: {props.rocket.height.meters}</h3>
 
         <h4>Isp: {props.rocket.engines.isp.sea_level}</h4>
+        <h4>Isp: {props.rocket.flickr_images[1]}</h4>
 
         {/* <h3>{props.rocket.engines.thrust_sea_level}</h3> */}
       </div>
@@ -55,11 +56,15 @@ function RocketList() {
 
   // For every rocket in rocket list, pass rocket id and rocket object to rocket list
   return (
-    <div>
-      {rocket_list.map((rocket_item) => (
-        <Rocket key={rocket_item.id} rocket={rocket_item} />
-      ))}
-    </div>
+    <>
+      <NavBar />
+
+      <div>
+        {rocket_list.map((rocket_item) => (
+          <Rocket key={rocket_item.id} rocket={rocket_item} />
+        ))}
+      </div>
+    </>
   );
 }
 
