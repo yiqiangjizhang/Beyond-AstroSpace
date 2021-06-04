@@ -9,9 +9,7 @@ const Launch = (props) => {
     <div className="launch">
       <div className="info">
         <h1>{props.launch.name}</h1>
-        {/* FIXME: Not showing on DOM */}
-        <h1>{props.launch.type}</h1>
-        <h3>{props.launch.description}</h3>
+        <p>{props.launch.details}</p>
       </div>
     </div>
   );
