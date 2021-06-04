@@ -33,12 +33,11 @@ function RocketList() {
 
   // For every rocket in rocket list, pass rocket id and rocket object to rocket list
   return (
-    //     <div>
-    // {RocketList.map((rocket_item) => (
-    // <Rocket key={rocket_item.id} rocket={rocket_item} />
-    // ))}
-    // </div>
-    <div>Hola</div>
+    <div>
+      {rocket_list.map((rocket_item) => (
+        <Rocket key={rocket_item.id} rocket={rocket_item} />
+      ))}
+    </div>
   );
 }
 
