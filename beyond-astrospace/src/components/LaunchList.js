@@ -13,9 +13,10 @@ const Launch = (props) => {
       <div className="info">
         <h1>{props.launch.name}</h1>
         <h4>Launch date: {props.launch.date_utc}</h4>
-        <h4>Success: {props.launch.success ? "yes" : "no"}</h4>
-        <h4>Reused: {props.launch.reused ? "yes" : "no"}</h4>
-        <h4>Recovered: {props.launch.recovered ? "yes" : "no"}</h4>
+        <h4>Success: {props.launch.success}</h4>
+        <h4>Reused: {props.launch.reused}</h4>
+        <h4>Recovered: {props.launch.recovered}</h4>
+
         <p>{props.launch.details}</p>
       </div>
     </div>
