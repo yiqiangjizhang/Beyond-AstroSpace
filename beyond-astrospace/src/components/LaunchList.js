@@ -30,7 +30,7 @@ function LaunchList() {
   // const [selected_year, set_selected_year] = useState(null);
 
   // Search
-  const [search, set_search] = useState("2007");
+  const [search, set_search] = useState(null);
 
   // Load rockets function
   const loadLaunches = async () => {
@@ -60,25 +60,35 @@ function LaunchList() {
     loadLaunches(); // Call function
   }, [search]);
 
+  /* The handleChange() function to set a new state for input */
+  const handleChange = (event) => {
+    set_search(event.target.value);
+  };
+
   // If loading, then display loading message
   if (launch_list === null) {
     // return <div>Loading...</div>;
     return <Loading />;
   }
 
+  const { launches, selected_launch } = launch_item.state;
+  const filteredLaunches = launches.filter((launch) => {
+    launch.height.meter > selected_launch;
+  });
+
   // For every launch in rocket list, pass rocket id and rocket object to rocket list
   return (
     <div className="main-return">
       <NavBar />
 
-      {/* <Filter /> */}
+      <Filter onChange={handleChange} />
       <div className="container">
         <div className="row">
-          <form onSubmit={submit}>
+          {/* <form onSubmit={submit}>
             <input type="text" value={search} onChange={onChange} />
             <button>Search</button>
-          </form>
-          {launch_list.map((launch_item) => (
+          </form> */}
+          {filteredLaunches.map((launch_item) => (
             <Launch key={launch_item.id} launch={launch_item} />
           ))}
         </div>

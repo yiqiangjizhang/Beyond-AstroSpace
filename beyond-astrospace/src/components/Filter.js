@@ -1,9 +1,9 @@
 import React from "react";
 
-function Filter() {
+function Filter({ onChange }) {
   return (
     <div className="filter-wrapper">
-      <select name="height" className="filter-height">
+      <select name="height" className="filter-height" onChange={onChange}>
         <option value="2001">2001</option>
         <option value="2002">2002</option>
         <option value="2003">2003</option>
