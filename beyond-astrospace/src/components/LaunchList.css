@@ -1,6 +1,7 @@
 .launch {
   display: flex;
   flex-direction: row;
+  align-items: flex-start; /* Vertically align to the top, not stretch */
   position: relative;
   width: 50%;
   padding: 1rem;
